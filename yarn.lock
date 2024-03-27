@@ -698,6 +698,11 @@
   resolved "https://registry.npmjs.org/@lukeed/csprng/-/csprng-1.1.0.tgz"
   integrity sha512-Z7C/xXCiGWsg0KuKsHTKJxbWhpI3Vs5GwLfOean7MGyVFGqdRgBbAjOCh6u4bbjPc/8MJ2pZmK/0DLdCbivLDA==
 
+"@needle-innovision/nestjs-tenancy@^3.0.2":
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@needle-innovision/nestjs-tenancy/-/nestjs-tenancy-3.0.2.tgz#e45f912681063600289927edd40a11bc406b21ef"
+  integrity sha512-7BX7WCcWQYgiJQzUHdin12pObb5kozkLWyDHvMSOQ8xR9yLwVDSHCqJ2jivKppKnTAC+6UG6mX9PTOVUKbGkxQ==
+
 "@nestjs/cli@^10.0.0":
   version "10.1.10"
   resolved "https://registry.npmjs.org/@nestjs/cli/-/cli-10.1.10.tgz"
