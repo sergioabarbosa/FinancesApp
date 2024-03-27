@@ -13,11 +13,13 @@ import {
 
 import { selectDatabaseConnection } from './tenants/database.connection';
 import * as dotenv from 'dotenv';
+import { TenantModule } from './tenants/tenant.module';
 
 dotenv.config();
 
 @Module({
   imports: [
+    TenantModule,
     UsersModule,
     MongooseModule.forRoot(process.env.DB_URL),
     AuthModule,
