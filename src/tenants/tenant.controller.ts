@@ -12,6 +12,7 @@ export class TenantController {
       name: 'Novo Tenant',
       domain: 'example.com',
       subdomain: 'newtenant',
+      users: [],
     });
     return `Novo Tenant criado com ID: ${createdTenant._id}`;
   }
@@ -31,5 +32,15 @@ export class TenantController {
     // Aqui você chama o serviço para obter todos os tenants
     const tenants = await this.tenantService.findAllTenants();
     return `Todos os Tenants: ${JSON.stringify(tenants)}`;
+  }
+
+  @Get(':id/tenants')
+  async getTenantUsers(@Param('id') tenantId: string): Promise<string> {
+    // Aqui você chama o serviço para obter todos os usuários de um tenant específico pelo tenentId
+    const tenant = await this.tenantService.findTenantById(tenantId);
+    if (!tenant) {
+      return `Nenhum Tenant encontrado com ID: ${tenantId}`;
+    }
+    return `Usuários do Tenant: ${JSON.stringify(tenant.users)}`;
   }
 }

@@ -7,6 +7,7 @@ export interface TenantData {
   name: string;
   domain: string;
   subdomain: string;
+  users: string[];
 }
 
 @Schema()
@@ -20,6 +21,9 @@ export class Tenant {
 
   @Prop({ required: true })
   subdomain: string;
+
+  @Prop({ type: [String], default: [] })
+  users: string[];
 }
 
 export const TenantSchema = SchemaFactory.createForClass(Tenant);
